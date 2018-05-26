@@ -128,12 +128,15 @@ namespace Task3
     {
         static void Main(string[] args)
         {
-            Tonaufnahme a = new MusicTitle("test_Interpret", "test_Title", 2000, 179, "s", 3.99m);
-            Tonaufnahme b = new Podcast("test_Publisher", "test_Title", 1999, 90, "m", 6.99m);
+            var a = new Tonaufnahme[2];
+            a[0] = new MusicTitle("test_Interpret", "test_Title", 2000, 179, "s", 3.99m);
+            a[1] = new Podcast("test_Publisher", "test_Title", 1999, 90, "m", 6.99m);
 
-            Console.WriteLine($"Title: {a.Title} & {b.Title}");
-            Console.WriteLine($"Length: {Math.Round(b.getLength("s"),0)}sec & {Math.Round(b.getLength("m"),2)}min");
-            Console.WriteLine($"Length: {Math.Round(a.getLength("s"), 0)}sec & {Math.Round(a.getLength("m"), 2)}min");
+
+
+            Console.WriteLine($"Title: {a[0].Title} & {a[1].Title}");
+            Console.WriteLine($"Length: {Math.Round(a[1].getLength("s"),0)}sec & {Math.Round(a[1].getLength("m"),2)}min");
+            Console.WriteLine($"Length: {Math.Round(a[0].getLength("s"), 0)}sec & {Math.Round(a[0].getLength("m"), 2)}min");
         }
     }
 }

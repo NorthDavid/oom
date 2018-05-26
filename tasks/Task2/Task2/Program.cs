@@ -11,6 +11,12 @@ namespace Task2
         public string Title => m_title;
         public string Interpret => m_interpret;
 
+        public void printAll()
+        {
+            Console.WriteLine($"inMethod = {m_title}");
+            Console.WriteLine($"inMethod = {m_interpret}");
+        }
+
         public decimal Price
         {
             get { return m_prize; }
@@ -35,6 +41,8 @@ namespace Task2
             Console.WriteLine($"Music Interpret = {a.Interpret}");
             Console.WriteLine($"Music Price = {a.Price}");
             Console.WriteLine($"Music new Price = {a.Price = 500}");
+
+            a.printAll();
 
         }
     }
